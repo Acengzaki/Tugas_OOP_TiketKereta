@@ -10,7 +10,6 @@ public class DaftarKereta {
     }
 
     private void initData() {
-        // Nama kereta diperbarui sesuai request
         listTiket.add(new TiketEksekutif("Garut Selatan", 500000));
         listTiket.add(new TiketEksekutif("Tasik Malaya", 200000));
         listTiket.add(new TiketEksekutif("Pameungpeuk Garut", 400000));
@@ -22,8 +21,6 @@ public class DaftarKereta {
         System.out.println("-----------------------------------------------");
         for (int i = 0; i < listTiket.size(); i++) {
             Tiket t = listTiket.get(i);
-            // %-18s artinya teks rata kiri dengan lebar 18 karakter
-            // %,.0f artinya angka dengan pemisah ribuan
             System.out.printf("%d.   %-20s  Rp%,.0f\n", (i + 1), t.getNamaKereta(), t.hitungTotalHarga());
         }
         System.out.println("===============================================");
